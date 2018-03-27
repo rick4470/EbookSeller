@@ -1,13 +1,13 @@
 <?php
 
-$SECRETEKEY = 'MY SECRETE KEY';
+$SECRETKEY = 'MY SECRET KEY';
 $DOMAIN = 'domain.com';
 $FILELOCATION = '/location/of/file';
 
-if ($_GET["payment"] !== $SECRETEKEY) {
+if ($_GET["payment"] !== $SECRETKEY) {
   header("Location: $DOMAIN");
 }else{
-  if ($_GET["payment"] == $SECRETEKEY) {
+  if ($_GET["payment"] == $SECRETKEY) {
     if (get_option($_SERVER["REMOTE_ADDR"]) == 1) {
         header("Location: $DOMAIN");
     }else{
